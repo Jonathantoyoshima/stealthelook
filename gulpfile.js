@@ -13,14 +13,8 @@ gulp.task('html', function(){
     .pipe(gulp.dest('dist/'))
 });
 
-gulp.task('liquid', function(){
-  return gulp.src("./src/liquid/*.ext")
-    .pipe(liquid())
-    .pipe(gulp.dest("./dist"))
-});
-
-gulp.task('sass', function(){
-  return gulp.src('src/sass/*.sass')
+gulp.task('scss', function(){
+  return gulp.src('src/sass/*.scss')
     .pipe(sass())
     .pipe(minifyCSS())
     .pipe(gulp.dest('dist/css'))

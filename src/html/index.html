@@ -1,31 +1,30 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>teste</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title></title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./jquery.mmenu.all.js"></script>
+   <link href="./jquery.mmenu.all.css" rel="stylesheet" />
 
 </head>
-
 <body>
-  <!--This is our template. -->
-  <!--Data will be inserted in its according place, replacing the brackets.-->
-  <script id="address-template" type="text/x-handlebars-template">
-    {{#each paragraph}}
-    <p>You can find me in {{city}}. My address is {{number}} {{street}}.</p>
-    {{/each}}
-  </script>
-
-  <!--Your new content will be displayed in here-->
-  <div class="content-placeholder"></div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
-
-<script type="text/javascript" src="./js/app.min.js">
-
-</script>
+<div id="page">
+  <div id="header"></div>
+  <div id="content"></div>
+  <div id="footer"></div>
+</div>
+<nav id="my-menu">
+   <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about/">About us</a>
+         <ul>
+            <li><a href="/about/history/">History</a></li>
+            <li><a href="/about/team/">The team</a></li>
+            <li><a href="/about/address/">Our address</a></li>
+         </ul>
+      </li>
+      <li><a href="/contact/">Contact</a></li>
+   </ul>
+</nav>
 </body>
-
 </html>
