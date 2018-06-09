@@ -1,0 +1,30 @@
+{
+  "name": "stealthelook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jonathantoyoshima/stealthelook.git"
+  },
+  "author": "Jonathan Satoru Toyoshima <jonathantoyoshima@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jonathantoyoshima/stealthelook/issues"
+  },
+  "homepage": "https://github.com/Jonathantoyoshima/stealthelook#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-watch": "^5.0.0",
+    "hamburgers": "^0.9.3"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.24.4",
+    "gulp-autoprefixer": "^5.0.0"
+  }
+}

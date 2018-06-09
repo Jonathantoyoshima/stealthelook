@@ -1,42 +1,50 @@
-var gulp = require('gulp'),
-    html = require('gulp-html'),    
-    sass = require('gulp-sass'),
-    minifyCSS = require('gulp-csso'),
-    concat = require('gulp-concat'),
-    sourcemaps = require('gulp-sourcemaps'),
-    watch = require('gulp-watch'),
-    browserSync = require('browser-sync').create();
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer');
+var sourcemaps = require('gulp-sourcemaps');
+var browserSync = require('browser-sync').create();
 
-gulp.task('html', function(){
-  return gulp.src('src/html/*.html')
-    .pipe(html())
-    .pipe(gulp.dest('dist/'))
+ 
+gulp.task('images', function(){
+ return gulp.src('./src/images/*')
+  .pipe(gulp.dest('./dist/images/'))
+  .pipe(browserSync.reload({
+      stream: true
+    }));
 });
 
-gulp.task('scss', function(){
-  return gulp.src('src/sass/*.scss')
-    .pipe(sass())
-    .pipe(minifyCSS())
-    .pipe(gulp.dest('dist/css'))
-    .pipe(browserSync.reload({
+gulp.task('html', function(){
+ return gulp.src('./src/**/*.html')
+  .pipe(gulp.dest('./dist/'))
+  .pipe(browserSync.reload({
       stream: true
-    }))
+    }));
+});
+
+gulp.task('sass', function () {
+ return gulp.src('./src/sass/**/*.scss')
+  .pipe(sourcemaps.init())
+  .pipe(sass().on('error', sass.logError))
+  .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
+  .pipe(sourcemaps.write('./maps'))  
+  .pipe(gulp.dest('./dist/css'))
+  .pipe(browserSync.reload({
+      stream: true
+    }));
 });
 
 gulp.task('js', function(){
-  return gulp.src('src/javascript/*.js')
-    .pipe(sourcemaps.init())
-    .pipe(concat('app.min.js'))
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest('dist/js'))
+  return gulp.src('./src/js/**/*.js')
+  .pipe(sourcemaps.init())
+  .pipe(sourcemaps.write('./maps'))
+  .pipe(gulp.dest('./dist/js'))
+  .pipe(browserSync.reload({
+      stream: true
+    }))
 });
-
-gulp.task('watch', ['browserSync'], function(){
-  gulp.watch('src/html/**/*.html', ['html']);
-  gulp.watch('src/html/**/*.ext', ['liquid']);
-  gulp.watch('src/sass/**/*.sass', ['sass']);
-  gulp.watch('src/javascript/**/*.js', ['js']);
-})
 
 gulp.task('browserSync', function() {
   browserSync.init({
@@ -44,6 +52,10 @@ gulp.task('browserSync', function() {
       baseDir: 'dist'
     },
   })
-})
+});
 
-gulp.task('default', [ 'html', 'liquid', 'sass', 'js' ]);
+gulp.task('default', ['browserSync', 'images'], function(){
+  gulp.watch('./src/**/*.html', ['html']);
+  gulp.watch('./src/sass/**/*.scss', ['sass']);
+  gulp.watch('./src/js/**/*.js', ['js']);
+});
