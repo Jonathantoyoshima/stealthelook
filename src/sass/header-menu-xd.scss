@@ -1,0 +1,39 @@
+.hamburger{
+	display: none;
+}
+.header{
+	.logo{
+		width: 20%;
+		margin: 5px;
+		padding: 0;
+	}
+	.logo-bigger{
+		width: 100%;
+
+	}
+	.menu-xd{
+		ul{
+			margin: 0;
+		}
+		li{
+			float: left;
+			margin: 5px;
+		}
+	}
+}
+
+@media screen and (max-width: 727px){
+	.header{
+		.hamburger{
+			display: block;
+		}
+		.logo{
+			margin: 0 auto;
+			width: auto;
+		}
+		.menu-xd{
+			display: none;
+		}
+	}
+
+}

@@ -1,0 +1,197 @@
+.header{
+	.topbar{
+		display:flex;
+	}	
+	.menu-btn{
+	}
+	.logo{
+		margin: 0 auto;		
+		.logo-short{
+			display: none;
+		}
+	}
+}
+
+#menu{
+	input{
+		font-family: 'Oswald';
+		width: 100%;
+		height: 58px;
+		padding: 10px 10px 10px 20px;
+		border: none;
+		letter-spacing: 0.03em;
+	}	
+}
+
+#page{
+	max-width: 1000px;
+	margin: auto;
+	position: relative;
+}
+
+#content{
+	width:100%;
+	max-width: 1000px;
+
+	.slideshow-container {
+		margin: 15px;
+		max-width: 1000px;
+		position: relative;
+		.mySlides {
+			.big{
+				display:block;
+			}
+			.small{
+				display:none;
+			}
+		}
+	}
+
+	.prev, .next {
+	  cursor: pointer;
+	  position: absolute;
+	  top: 50%;
+	  width: auto;
+	  margin-top: -22px;
+	  padding: 16px;
+	  color: white;
+	  font-weight: bold;
+	  font-size: 18px;
+	  transition: 0.6s ease;
+	  border-radius: 0 3px 3px 0;
+	}
+	
+	.next {
+	  right: 0;
+	  border-radius: 3px 0 0 3px;
+	}
+
+	.prev:hover, .next:hover {
+  	background-color: rgba(0,0,0,0.8);
+	}
+
+	.active {
+	  background-color: #717171;
+	}
+
+	.transition {
+  	animation-name: transition;
+  	animation-duration: 1.5s;
+	}
+
+	@keyframes transition {
+	  from {opacity: 0} 
+	  to {opacity: 1}
+	}
+
+	#heading-section {
+		margin: 15px;
+		text-align: center;
+		width: 100%;
+		max-width: 1000px;
+		display: block;
+
+		p{
+			margin: 0;
+			padding: 0;
+			font-family: 'OpenSans', sans-serif;
+			font-size: 16px;
+		}
+		.images {
+			width: 100%;
+			display: inline-block;
+
+			.image{
+				float: left;
+				margin:1.65%;
+				width: 30.0%;
+			}
+			
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+	#shop-section{
+		width: 100%;
+		text-align: center;
+		display: block;
+
+		.frame{
+			float: left;
+			width: 50%;
+			padding: 30px;
+		
+			img {
+				width: 100%;
+			}
+
+			a {
+		    display: inline-block;
+		    font-size: 12px;
+		    font-weight: 400;
+		    border: 1px solid black;
+		    padding: 6px 10px 4px 10px;
+		    line-height: 1.5em;
+		    margin-top: 10px;
+			}
+		}
+	}
+	#Instagram-section{
+		width: 100%;
+		text-align: center;
+
+		.title {
+			margin: 0;
+		}
+		.subheading{
+			color: #fb377f;
+			margin: 0;
+		}
+
+		.insta-img {
+	    display: block;
+	    position: relative;
+	    width: 100%;
+	    overflow: hidden;
+	    padding-bottom: 100%;
+	    background-size: cover;
+	    background-position: center;
+	    background-repeat: no-repeat;
+		}
+	}
+}
+
+@media only screen and (max-width: 727px) {
+	.header{
+		.logo{
+			.logo-short{
+				display:block;
+			}
+			.logo-bigger{
+				display:none;
+			}
+		}
+	}
+	#content {
+		.slideshow-container {
+			.mySlides {
+				.big{
+					display:none;
+				}
+				.small{
+					display:block;
+				}
+			}
+		}
+	
+		#heading-section {
+			.images{
+				.image{
+					width: 100%;
+				}
+			}
+		}
+	}
+}

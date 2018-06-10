@@ -1,0 +1,136 @@
+footer{
+	display:block;
+
+	.footer{
+		margin-top:30px;
+		position: relative;
+		z-index: 100;
+
+		.footer-top {
+			padding: 15px 0;
+		}
+
+		.redes-sociais {
+		    display: flex;
+    		align-items: center;
+    		justify-content: center;
+
+    		p {
+			    margin: 0px 15px 0px 0px;
+    			font-size: 1.2em;
+    			font-family: "Oswald", sans-serif;
+    		}
+
+    		.list-redes{
+    			margin: 0;
+    		}
+
+    		a {
+			    font-size: 1.3em;
+    			color: gray;
+    			line-height: 1em;
+    		}
+		}
+	}
+
+	.footer-mid{
+		padding: 25px 0px 0px;
+		background-color: rgba(68,68,68,0.05);
+
+		.footer-title {
+			color: #696969;
+		    font-weight: 400;
+		}
+
+		.lower-block {
+			.formas-pagamento {
+ 			   max-width: 300px;
+    			margin: 15px auto 25px;
+			    display: flex;
+    			align-items: center;
+    			justify-content: center;
+    			flex-wrap: wrap;
+			}
+			img{
+			    height: 25px;
+	    		width: auto;
+	    		margin: 0 3px;
+			    vertical-align: middle;
+			}
+		}
+		.col-links {
+			float:left;
+		    padding: 0px;
+		    width: 100.0%;
+
+		    .col-link{
+		    	float: left;
+		    	width: 25.0%;
+		    }
+
+		    .col-link a {
+		    	color: #696969;
+	    		font-family: "Open Sans",sans-serif;
+			    width: 50%;
+		    }
+		}
+
+		.form-newsletter .field input {
+			height: 35px;
+		    width: 100%;
+		    padding: 5px 5px;
+	    	border: 1px solid #696969;
+		    display: block;
+		    color: #3f3f3f;
+		    background-color: white;
+		    appearance: none;
+		    border-radius: 0px;
+		    box-shadow: none;
+		}
+
+		.form-newsletter .field button {
+			width: 100%;
+		    display: inline-block;
+		    min-width: 0px;
+		    padding: 0px;
+		    line-height: 1em;
+		    height: 35px;
+		}
+	}
+
+	.footer-bottom {
+		position: relative;
+		display:block;
+		width: 100%;
+		margin: 0 auto;
+		padding: 15px 0;
+		text-align: center;
+
+	}
+
+	
+}
+a:link, a:visited, a:active {
+    color: #000000;
+    text-decoration: none;
+}
+ul {
+    display: block;
+    list-style: none;
+    padding: 0;
+}
+.btn-submit {
+    background-color: white;
+    border: 1px solid #0c0c0c;
+    color: #0c0c0c;
+    border-radius: 0px;
+    font-size: 1.2em;
+    padding: 10px 30px;
+    transition: all 350ms ease;
+}
+
+@media only screen and (max-width: 727px) {
+	.footer .footer-mid .col-links .col-link {
+		width: 100.0%;
+	}
+}

@@ -25,3 +25,28 @@ $(document).ready(function() {
     });
     
 });
+
+var slideIndex = 0;
+var counting_time;
+
+// Next/previous controls
+function plusSlides(prev) {
+  clearTimeout(counting_time);
+  prev ? slideIndex - 1 : null;
+  showSlides();
+}
+
+function showSlides() {
+    console.log(slideIndex);
+    var i;
+    var slides = $(".mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1} 
+    slides[slideIndex-1].style.display = "block"; 
+    counting_time = setTimeout(showSlides, 5000);
+}
+
+showSlides(slideIndex);

@@ -1,41 +1,185 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <title>Steal the look</title>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <script src="./jquery.mmenu.all.js"></script>
-      <link href="./jquery.mmenu.all.css" rel="stylesheet" />
-      <link rel="stylesheet" type="text/css" href="./css/index.css">
-   </head>
-   <body>
-      <div id="page">
-         <div id="header" class="header">
-            <div class="topbar">
-               <button id="icon" class="hamburger hamburger--collapse menu-btn" type="button">
-               <span class="hamburger-box">
-                  <span class="hamburger-inner"></span>
-               </span>
-               </button>
-               <img src="./images/logo_mobile.png" class="logo-short">
+
+<head>
+    <title>Steal the look</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./jquery.mmenu.all.js"></script>
+    <link href="./jquery.mmenu.all.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+</head>
+
+<body>
+    <div class='container'>
+        <div id="page">
+            <div id="header" class="header">
+                <div class="topbar">
+                    <button id="icon" class="hamburger hamburger--collapse menu-btn" type="button">
+                        <span class="hamburger-box">
+                      <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                    <div class='logo'>
+                        <img src="./images/logo_mobile.png" class="logo-short">
+                        <img src="./images/logo_stl_shop.png" class="logo-bigger">
+                    </div>
+                    <div class="menu-xd">
+                      <ul>
+                        <li><a href="#">ENTRAR</a></li>
+                        <li><a href="#">NEN IN</a></li>
+                        <li><a href="#">ROUPAS</a></li>
+                        <li><a href="#">SAPATOS</a></li>
+                        <li><a href="#">ACESSÓRIOS</a></li>
+                        <li><a href="#">VINTAGE</a></li>
+                        <li><a href="#">BEACHWEAR</a></li>
+                        <li><a href="#">MARCAS</a></li>
+                        <li><a href="#">SALE</a></li>
+                    </ul>
+                    </div>
+                    <div>
+                        <span class="icon-bag2 square-icon"></span>
+                    </div>
+
+                </div>
             </div>
-         </div>
-         <div id="content"></div>
-         <div id="footer"></div>
-      </div>
-      <nav id="menu">
-         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about/">About us</a>
-            <ul>
-               <li><a href="/about/history/">History</a></li>
-               <li><a href="/about/team/">The team</a></li>
-               <li><a href="/about/address/">Our address</a></li>
-            </ul>
-         </li>
-         <li><a href="/contact/">Contact</a></li>
-      </ul>
-   </nav>
-   <script type="text/javascript" src="./js/index.js"></script>
+            <div id="content">
+                <!-- Slideshow container -->
+                <div class="slideshow-container">
+                    <!-- Full-width images with number and caption text -->
+                    <div class="mySlides transition">
+                        <img class="small" src="./images/slideshow_small1.jpg" style="width:100%">
+                        <img class="big" src="./images/slideshow_big1.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides transition">
+                        <img class="small" src="./images/slideshow_small2.jpg" style="width:100%">
+                        <img src="./images/slideshow_big2.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides transition">
+                        <img class="small" src="./images/slideshow_small3.jpg" style="width:100%">
+                        <img class="big" src="./images/slideshow_big2.jpg" style="width:100%">
+                    </div>
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(true)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(false)">&#10095;</a>
+                </div>
+                <div id="heading-section">
+                    <h2 class="title">DESTAQUES DA SEMANA</h2>
+                    <p> As marcas que estão na wish list das nossas editoras essa semana. </p>
+                    <div class='images'>
+                        <img class="image" src="./images/destaque1.jpg">
+                        <img class="image" src="./images/destaque2.jpg">
+                        <img class="image" src="./images/destaque3.jpg">
+                    </div>
+                </div>
+                <div id="shop-section">
+                    <h2 class="title">SHOP THE LOOK</h2>
+                    <div class="frame">
+                        <img src="./images/thumb1.jpeg">
+                        <p>COURTNEY WOULD LOVE</p>
+                        <a>SHOP ></a>
+                    </div>
+                    <div class="frame">
+                        <img src="./images/thumb2.jpeg">
+                        <p>COURTNEY WOULD LOVE</p>
+                        <a>SHOP ></a>
+                    </div>
+                </div>
+                <div id="Instagram-section">
+                    <h2 class="title"><b>FOLLOW US</b> ON INSTAGRAM</h2>
+                    <p class="subheading">@STEALTHELOOK.SHOP</p>
+                    <div class="insta-img"></div>
+                </div>
+            </div>
+            <footer>
+                <div class="footer">
+                    <div class="footer-top">
+                        <div class="boxed text-center">
+                            <div class="redes-sociais">
+                                <p> FOLLOW US: </p>
+                                <ul class="list-redes list-unstyled list-inline">
+                                    <li> <a href="https://www.facebook.com/stealthelook.shop" target="_blank"> <i class="fab fa-facebook"></i> </a> </li>
+                                    <li> <a href="https://br.pinterest.com/shopstl/" target="_blank"> <i class="fab fa-pinterest"></i> </a> </li>
+                                    <li> <a href="https://instagram.com/stealthelook.shop" target="_blank"> <i class="fab fa-instagram"></i> </a> </li>
+                                    <li> <a href="https://www.youtube.com/stealthelook" target="_blank"> <i class="fab fa-youtube"></i> </a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-mid">
+                        <div class="boxed">
+                            <div class="col-links">
+                                <div class="col-link">
+                                    <h4 class="footer-title"> INSTITUCIONAL </h4>
+                                    <ul class="list-links">
+                                        <li> <a href="/p/quem-somos">Quem Somos</a> </li>
+                                        <li> <a href="/p/atendimento">Faça parte do SHOP</a> </li>
+                                        <li> <a href="/marcas">Marcas</a> </li>
+                                    </ul>
+                                </div>
+                                <div class="col-link">
+                                    <h4 class="footer-title"> AJUDA E SUPORTE </h4>
+                                    <ul class="list-links">
+                                        <li> <a href="/p/atendimento">FAQ</a> </li>
+                                        <li> <a href="/p/atendimento">Formas de Pagamento</a> </li>
+                                        <li> <a href="/p/atendimento">Trocas e Devoluções</a> </li>
+                                        <li> <a href="/p/atendimento">Entre em contato</a> </li>
+                                        <li> <a href="/p/atendimento">Políticas de Privacidade</a> </li>
+                                    </ul>
+                                </div>
+                                <div class="col-link">
+                                    <h4 class="footer-title">SEGURANÇA</h4><a href="https://www.lojaconfiavel.com/stealthelook" class="ts-footerstamp" data-lcname="stealthelook" target="_blank"><img src="//service.yourviews.com.br/Image/fb090b88-446f-4fe8-ad0c-af66b7dffd35/Footer.jpg" title="Loja Confiável" alt="Loja Confiável" style="width: 88px; height: 91px;"></a>
+                                </div>
+                                <div class="col-link">
+                                    <h4 class="footer-title"> Receba as novidades </h4>
+                                    <form action="//stealthelook.us5.list-manage.com/subscribe/post?u=ddba658ade1d826d0228a3788&amp;id=5c48b1cf5b" method="post" class="form-newsletter form form-inline" target="_blank">
+                                        <input type="hidden" value="Subscribe" name="subscribe">
+                                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                                            <input type="text" name="b_ddba658ade1d826d0228a3788_5c48b1cf5b" tabindex="-1" value=""> </div>
+                                        <div class="field text">
+                                            <input type="email" name="EMAIL" class="input" placeholder="Seu email"> </div>
+                                        <div class="field field-submit">
+                                            <button type="submit" class="btn-submit">assinar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <div class="lower-block">
+                            <div class="formas-pagamento"> <span> <img src="/images/icons/pagamento/visa.jpg" alt="Visa" title="Visa"> </span> <span> <img src="/images/icons/pagamento/master.png" alt="Master Card" title="Master Card"> </span> <span> <img src="/images/icons/pagamento/amex.png" alt="American Express" title="American Express"> </span> <span> <img src="/images/icons/pagamento/elo.png" alt="Elo" title="Elo"> </span> <span> <img src="/images/icons/pagamento/hiper.png" alt="Hipercard" title="Hipercard"> </span> <span> <img src="/images/icons/pagamento/diners.png" alt="Hipercard" title="Hipercard"> </span> <span> <img src="/images/icons/pagamento/boleto.png" alt="Boleto bancário" title="Boleto bancário"> </span> </div>
+                            <p class="cnpj"> <span>CNPJ:</span> 20.512.511/0001-08. </p>
+                            <div> <span class="text-1">© 2017 STEAL THE LOOK. Todos os direitos reservados.</span> <span class="text-2 assinatura"> <a href="www.vnda.com.br" class="" target="_blank"> <span class="vnda">Vnda</span> - Tecnologia em Ecommerce </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    </footer>
+    </div>
+    </div>
+    <nav id="menu">
+        <ul>
+            <li>
+                <input type="text" placeholder="Procurar por...">
+            </li>
+            <li><a href="#">ENTRAR</a></li>
+            <li><a href="#">NEN IN</a></li>
+            <li><a href="#">ROUPAS</a></li>
+            <li><a href="#">SAPATOS</a></li>
+            <li><a href="#">ACESSÓRIOS</a></li>
+            <li><a href="#">VINTAGE</a></li>
+            <li><a href="#">BEACHWEAR</a></li>
+            <li><a href="#">MARCAS</a></li>
+            <li><a href="#">SALE</a></li>
+        </ul>
+    </nav>
+    <script type="text/javascript" src="./js/index.js"></script>
 </body>
+
 </html>

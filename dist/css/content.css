@@ -1,0 +1,140 @@
+.header .topbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.header .logo {
+  margin: 0 auto; }
+  .header .logo .logo-short {
+    display: none; }
+
+#menu input {
+  font-family: 'Oswald';
+  width: 100%;
+  height: 58px;
+  padding: 10px 10px 10px 20px;
+  border: none;
+  letter-spacing: 0.03em; }
+
+#page {
+  max-width: 1000px;
+  margin: auto;
+  position: relative; }
+
+#content {
+  width: 100%;
+  max-width: 1000px; }
+  #content .slideshow-container {
+    margin: 15px;
+    max-width: 1000px;
+    position: relative; }
+    #content .slideshow-container .mySlides .big {
+      display: block; }
+    #content .slideshow-container .mySlides .small {
+      display: none; }
+  #content .prev, #content .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    -webkit-transition: 0.6s ease;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0; }
+  #content .next {
+    right: 0;
+    border-radius: 3px 0 0 3px; }
+  #content .prev:hover, #content .next:hover {
+    background-color: rgba(0, 0, 0, 0.8); }
+  #content .active {
+    background-color: #717171; }
+  #content .transition {
+    -webkit-animation-name: transition;
+    animation-name: transition;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s; }
+
+@-webkit-keyframes transition {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes transition {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+  #content #heading-section {
+    margin: 15px;
+    text-align: center;
+    width: 100%;
+    max-width: 1000px;
+    display: block; }
+    #content #heading-section p {
+      margin: 0;
+      padding: 0;
+      font-family: 'OpenSans', sans-serif;
+      font-size: 16px; }
+    #content #heading-section .images {
+      width: 100%;
+      display: inline-block; }
+      #content #heading-section .images .image {
+        float: left;
+        margin: 1.65%;
+        width: 30.0%; }
+      #content #heading-section .images img {
+        width: 100%; }
+  #content #shop-section {
+    width: 100%;
+    text-align: center;
+    display: block; }
+    #content #shop-section .frame {
+      float: left;
+      width: 50%;
+      padding: 30px; }
+      #content #shop-section .frame img {
+        width: 100%; }
+      #content #shop-section .frame a {
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 400;
+        border: 1px solid black;
+        padding: 6px 10px 4px 10px;
+        line-height: 1.5em;
+        margin-top: 10px; }
+  #content #Instagram-section {
+    width: 100%;
+    text-align: center; }
+    #content #Instagram-section .title {
+      margin: 0; }
+    #content #Instagram-section .subheading {
+      color: #fb377f;
+      margin: 0; }
+    #content #Instagram-section .insta-img {
+      display: block;
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      padding-bottom: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat; }
+
+@media only screen and (max-width: 727px) {
+  .header .logo .logo-short {
+    display: block; }
+  .header .logo .logo-bigger {
+    display: none; }
+  #content .slideshow-container .mySlides .big {
+    display: none; }
+  #content .slideshow-container .mySlides .small {
+    display: block; }
+  #content #heading-section .images .image {
+    width: 100%; } }
+
+/*# sourceMappingURL=maps/content.css.map */
